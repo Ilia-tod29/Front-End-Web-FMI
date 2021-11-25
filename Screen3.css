@@ -1,0 +1,27 @@
+*{
+    font-family: Helvetica, sans-serif;
+}
+body{
+    font-size: 16px;
+    /* background: linear-gradient(-100deg,#A2F2F1 0%, #B19AFE 100%); */
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.main{
+    background: linear-gradient(-100deg,#A2F2F1 0%, #B19AFE 100%);
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
