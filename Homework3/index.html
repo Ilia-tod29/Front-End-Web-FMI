@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal List</title>
+
+    <script src="./script.js" type="module"></script>
+    <link href="./style.css" rel="stylesheet" />
+</head>
+<body>
+    <ul class="wrapper">
+        <li class="heading">Meal List</li>
+        <hr>
+        <li>
+            <div class="filtration">
+                <input type="text" placeholder="Filter by name" id="filter-by-name">
+                <input type="text" placeholder="Filter by region" id="filter-by-region">
+                <input type="text" placeholder="Filter by category" id="filter-by-category">
+            </div>
+        </li>
+        <hr>
+        <li class="heading">Add reciepe</li>
+        <hr>
+        <li>
+            <div class="filtration">
+                ! Important: The Name must be filled in. The count of Ingerdients and measurements must be equal.
+            </div>
+        </li>
+        <li>
+            <div class="filtration add-recipe">
+                <input type="text" placeholder="Name" id="input-name">
+                <input type="text" placeholder="Category" id="input-category">
+                <input type="text" placeholder="Region" id="input-region">
+                <input type="text" placeholder="Instructions" id="input-instruction">
+            </div>
+        </li>
+        <li>
+            <div class="filtration add-recipe">
+                <label for="image">Upload your image:</label>
+                <input type="file" id="recipe-img" name="img" accept="image/*">
+            </div>
+        </li>
+        <li>
+            <div class="filtration add-recipe">
+                <input type="text" placeholder="Ingredients" id="input-ingrediant">
+                <button id="add-ingrediant">Add ingrediant</button>
+                <input type="text" placeholder="Measures" id="input-measure">
+                <button id="add-measure">Add measure</button>
+            </div>
+        </li>
+        <li>
+            <div class="filtration submit">
+                <button id="submit-btn">Sumbit</button>
+            </div>
+        </li>
+        <hr>
+        <li>
+            <ul class="main-content">
+                <!-- <li>
+                    <div class="img-wrap">
+                        <div class="img">X</div>
+                        reciepeName
+                    </div>
+                    <div class="inf">
+                        region
+                        <button class="btn">seeRecuepe</button>
+                    </div>
+                </li> -->
+            </ul>
+        </li>
+    </ul>
+    <div class="popup">
+        <!-- <div class="popup-header">
+            name
+        </div>
+        <img src="./IMG_6378.jpg" alt="no img">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis nihil iusto similique recusandae odit vel quas rerum facilis ipsum quod?</p>
+        <table>
+            <tr>
+                <th>ingrediants</th>
+                <th>measure</th>
+            </tr>
+            <tr>
+                <td>sugar</td>
+                <td>1kg</td>
+            </tr>
+        </table>
+        <div class="popup-footer">
+            <button>Close</button>
+        </div> -->
+    </div>
+    <div class="overlay"></div>
+</body>
+</html>

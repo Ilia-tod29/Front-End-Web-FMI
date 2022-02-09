@@ -1,0 +1,258 @@
+:root {
+    --color1: #FFFFFF;
+    --color2: #EAEAEA;
+    --color3: #C4C4C4;
+    --color4: #000000;
+    --fontsize1: 16px;
+    --fontsize2: 32px;
+    --borderradius1: 16px;
+    --borderradius2: 8px;
+    --spacing1: 16px;
+    --spacing2: 8px;
+    --opacity: 0.5;
+    --fontweight1: 700;
+    --fontweight2: 400;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: var(--fontsize1);
+    font-weight: var(--fontweight2);
+}
+hr{
+    background: var(--color4);
+    margin: 0;
+}
+.heading {
+    background: var(--color2);
+    font-size: var(--fontsize2);
+    font-weight: var(--fontweight1);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 0;
+    padding: var(--spacing2);
+}
+.wrapper{
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: var(--spacing1);
+    width: 800px;
+    border: 1px solid var(--color4);
+    border-radius: 10px;
+}
+.filtration{
+    border: 1px solid var(--color4);
+    border-radius: 5px;
+    margin: var(--spacing2);
+    padding: var(--spacing2);
+    display: flex;
+    justify-content: center;
+}
+.filtration input{
+    margin-right: 5px;
+    border: 1px solid var(--color4);
+    border-radius:5px;
+    background: var(--color2);
+    height: var(--spacing1);;
+}
+.filtration input::placeholder{
+    color: var(--color4);
+    padding-left: 5px;
+}
+#recipe-img {
+    background: none;
+    border: none;
+    border-radius: 0;
+    height: auto;
+    margin-left: 5px;
+}
+.add-recipe {
+    background: var(--color3);
+}
+.add-recipe button {
+    margin-left: 5px;
+    margin-right: 15px;
+    border: 1px solid var(--color4);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.submit {
+    background: var(--color3);
+}
+#submit-btn{
+    border: 1px solid var(--color4);
+    border-radius: 5px;
+    width: 80%;
+    height: var(--fontsize2);
+    cursor: pointer;
+}
+.main-content{
+    border: 1px solid var(--color4);
+    border-radius: 10px;
+    margin: var(--spacing2);
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 14px;/*because with the --fontsize1 some of the names used to break the style */
+}
+.main-content li {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.main-content li:nth-last-of-type(2n){
+    background: var(--color2);
+}
+
+.img-wrap{
+    display: flex;
+    justify-content: space-between;
+    margin: var(--spacing2);
+}
+.inf{
+    display: flex;
+    margin-top: var(--spacing2);
+    margin-right: var(--spacing2);
+}
+.img{
+    margin-right: var(--spacing2);
+    width: 31px;
+    border-radius: 5px;
+}
+.text{
+    display: flex;
+    flex-direction: row;
+}
+.text p{
+    margin-top: var(--spacing2);
+}
+.comma{
+    margin-top: var(--spacing2);
+}
+.btn{
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: var(--spacing2);
+    border: 1px solid var(--color4);
+    border-radius: 5px;
+    background: var(--color3);
+    height: var(--fontsize2);
+    cursor: pointer;
+}
+
+
+/* popup */
+.popup{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    overflow-x: hidden;
+    bottom: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid var(--color4);
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 750px;
+    max-width: 80%;
+    min-height: 600px;
+}
+.popup.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+.popup-header{
+    padding: 10px 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--color4);
+    font-size: var(--fontsize2);
+    background: var(--color2);
+
+}
+.popup img{
+    height: 220px;
+    width: 264px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: var(--spacing1);
+    
+}
+.popup p{
+    text-align: center;
+    font-size: var(--fontsize1);
+    padding: 0 var(--spacing1) 0 var(--spacing1);
+}
+
+.popup table, td, th{
+    border: 1px solid var(--color4);
+    text-align: left;
+    padding: var(--spacing2);
+    table-layout: fixed;
+}
+.popup th{
+    background: var(--color2);
+}
+.popup table{
+    margin-left: 50%;
+    transform: translate(-50%, 0%);
+    width: 380px;
+    overflow: hidden;
+    border-radius: 8px;
+    border-collapse: collapse;
+    border-style: hidden; 
+    box-shadow: 0 0 0 1px #666; 
+    margin-bottom: var(--spacing1);
+}
+
+.popup-footer{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--color4);
+    background: var(--color2);
+    margin-top: auto;
+    width: 100%;
+}
+.popup-footer button{
+    width: 70px;
+    height: 30px;
+    border: 1px solid var(--color4);
+    border-radius: 5px;
+    background: var(--color3);
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+.overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+.popup.active{
+    opacity: 1;
+}
+
+.hidden{
+    display: none !important;
+}
